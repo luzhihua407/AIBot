@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: my.aiml -->
+<!-- Author: Dr. Richard S. Wallace -->
+<!-- Last modified: 七月 04, 2020 -->
+<!--  -->
+<!-- This AIML file is part of the SUPER 0.0.4 chat bot knowledge base. -->
+<!--  -->
+<!-- The SUPER brain is Copyright &copy; 2020 by ALICE AI Foundation. -->
+<!--  -->
+<!-- The SUPER brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.alicebot.org -->
+<category>
+<pattern>what is your name</pattern>
+<template>my name is liming</template>
+</category>
+<category>
+<pattern>你叫什么名字#</pattern>
+<template>我叫小兔兔，你呢</template>
+</category>
+<category>
+<pattern>*</pattern>
+<that>我叫小兔兔，你呢</that>
+<template><star/>,很高兴认识你！</template>
+</category>
+<category><pattern>你是*是*</pattern>
+<template>当然是女孩子啦</template>
+</category>
+<category><pattern>你几岁#</pattern>
+<template>女孩子的年龄是保密呦</template>
+</category>
+<category><pattern>你好</pattern>
+<template>你好呀</template>
+</category>
+<category><pattern>好呀</pattern>
+<template><srai>你好</srai></template>
+</category>
+<category>
+<pattern>帮助</pattern>
+<template>
+    1、关于电子围栏<br/>
+    2、门店辖区分哪几种划分方式<br/>
+    3、如何打印快兔物流标签
+    <br/>
+    请输入前面序号,或者直接输入您的问题
+</template>
+</category>
+<category>
+<pattern>1</pattern>
+<template>
+    <srai>电子围栏</srai>
+</template>
+</category>
+<category>
+<pattern>电子围栏</pattern>
+<template>
+    a、怎样进入电子围栏编辑页面<br/>
+    b、如何绘制电子围栏<br/>
+    c、如何避免使用电子围栏画辖区与其他门店重叠<br/>
+    d、怎样提高绘制电子围栏的精准度<br/>
+</template>
+</category>
+<category>
+<pattern>a</pattern>
+<template>
+    <srai>怎样进入电子围栏编辑页面</srai>
+</template>
+</category>
+<category>
+<pattern>b</pattern>
+<template>
+    <srai>如何绘制电子围栏</srai>
+</template>
+</category>
+<category>
+<pattern>c</pattern>
+<template>
+    <srai>如何避免使用电子围栏画辖区与其他门店重叠</srai>
+</template>
+</category>
+<category>
+<pattern>d</pattern>
+<template>
+    <srai>怎样提高绘制电子围栏的精准度</srai>
+</template>
+</category>
+
+<category>
+<pattern>怎样进入电子围栏编辑页面</pattern>
+<template>
+登录快兔工作人员平台，进入【客服运营系统】-选择【运营工具】-点击【营业点配置管理】-选择【营业网点】-【电子围栏辖区】。
+注意事项：<br/>
+(1) 电子围栏的划分，针对现有或者新建的轻分拨中心。<br/>
+(2) 只有门店的辖区类型是“电子围栏”的，才可以打开电子围栏编辑页。在分拨中心维护信息内，“辖区类型”选择为电子围栏。保存之后，才可使用电子围栏辖区功能。<br/>
+(3) 为避免派单路由混乱，严禁在业务运作时段修改门店辖区类型，必须在夜间22:00后操作本功能。<br/>
+</template>
+</category>
+<category>
+  <pattern>2</pattern>
+  <template>
+  <srai>门店辖区分哪几种划分方式</srai>
+  </template>
+</category>
+<category>
+  <pattern>3</pattern>
+  <template>
+  <srai>如何打印快兔物流标签</srai>
+  </template>
+</category>
+<category>
+  <pattern>门店辖区分哪几种划分方式</pattern>
+  <template>
+  <p>分为两种方式，两种方式只能二选一：</p>
+  <p>1. 行政区划。行政区划是根据国家行政区域来划分门店辖区，如果门店辖区和行政区划吻合，例如番禺区、天河区，可采用这种方式。划分非常简单，直接选择门店覆盖哪些区县，保存即可；</p>
+  <p>2. 电子围栏。电子围栏是通过在地图上根据河流、道路等显著地标描点的方式划分边界，需要人工绘制一个围起来的范围。</p>
+  </template>
+</category>
+<category>
+  <pattern>如何打印快兔物流标签</pattern>
+  <template>
+<p>请点击下载《快兔物流标签打印操作说明》及《安装驱动》压缩包，<a href='http://test.ktu56.com/ftp/mobile/weixin/printer.zip'>点我下载</a></p>
+  </template>
+</category>
+
+<category>
+  <pattern>如何绘制电子围栏</pattern>
+  <template>
+  <p>可借助行政区划辅助工具定位到区县一级的行政边界，输入行政名称，点击【显示边界】按钮。(下述以广州市番禺区为例，蓝色线条范围内为广州市番禺区的行政边界)</p>
+  <p><img src="http://test.ktu56.com/static2/images/electric_fence/ef1.png" width="80%"/></p>
+  <p>点击【画多边形】功能按钮，在地图上点击，可自动将各点连接成线。根据该行政区划的边界进行整体描点，将区域大致的围栏描绘出来(下列演示例为广州番禺区(红色阴影部分))，通过的鼠标的滚轮可进行地图比例的放大缩小操作。</p>
+  <p><img src="http://test.ktu56.com/static2/images/electric_fence/ef2.png" width="80%"/></p>
+  <p>点击【启用编辑模式】，将地图放大，按住并拖拽正方形小句柄，可调整围栏。</p>
+  <p><img src="http://test.ktu56.com/static2/images/electric_fence/ef3.png" width="80%"/></p>
+  <p class="warn_text">注意事项：</p>
+  <p>(1) 辅助功具只能查询到行政区县一级的行政边界。</p>
+  <p>(2) 可以根据个人喜好，选择是否显示边界，系统推荐使用边界显示，可以更精确的描点。</p>
+  <p>(3) 在描点的过程中，只需移动鼠标到相应位置单击鼠标左键即能描出对应围栏。</p>
+  <p>(4) 在描点还未结束之前，请切勿双击鼠标，双击鼠标即默认描点结束，无法继续描点。</p>
+  <p>(5) 如果删除多余的坐标点，请点击【启用删除模式】，选中要删除的坐标点即可。</p>
+  </template>
+</category>
+<category>
+  <pattern>如何避免使用电子围栏画辖区与其他门店重叠</pattern>
+  <template>
+    <p>描绘的电子围栏时与现有的某个轻分拨中心辖区相邻，可借助轻分拨中心辖区辅助工具，在地图上进行标记，将相邻的门店辖区标记出来(可以显示多个门店辖区)。(下述以科韵路轻分拨中心(演示数据)为例，绿色阴影范围内为科韵路轻分拨中心辖区的围栏边界)</p>
+    <p><img src="http://test.ktu56.com/static2/images/electric_fence/ef4.png" width="80%"/></p>
+  </template>
+</category>
+<category>
+  <pattern>怎样提高绘制电子围栏的精准度</pattern>
+  <template>
+    <p>1. 按住并拖拽线条，可调整围栏，建议沿河流、道路等显著地标划分边界，分界线尽量避开货主密集区域，切勿留下盲区，以免定位偏移导致订单被分配到其他门店或者无法判断订单归属门店。</p>
+    <p>2. 点击左上角按钮可切换到卫星地图模式，辅助精确识别位置；</p>
+    <p>3. 门店紧密交界的地方线条可以重叠，但是不要留下空白。</p>
+  </template>
+</category>
+<category>
+  <pattern>检查折扣</pattern>
+  <template>请输入您的订单号</template>
+</category>
+<category>
+  <pattern>*</pattern>
+  <that>请输入您的订单号</that>
+  <template>
+  <sraix service="REST"><star/></sraix>
+  </template>
+</category>
+</aiml>

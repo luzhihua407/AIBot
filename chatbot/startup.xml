@@ -1,0 +1,10 @@
+<aiml version="1.0">
+    <category>
+        <pattern>LOAD AIML B</pattern>
+        <template>
+            <!-- Load standard AIML set -->
+            <learn>bots/super/aiml/*.aiml</learn>
+            <learn>aiml/botdata/alice/ai.aiml</learn>
+        </template>
+    </category>
+</aiml>
